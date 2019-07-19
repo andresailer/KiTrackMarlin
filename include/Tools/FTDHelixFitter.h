@@ -46,8 +46,8 @@ class FTDHelixFitter{
    
 public:
    
-   FTDHelixFitter( Track* track ) throw( FTDHelixFitterException );
-   FTDHelixFitter( std::vector < TrackerHit* > trackerHits ) throw( FTDHelixFitterException );
+   FTDHelixFitter( Track* track );
+   FTDHelixFitter( std::vector < TrackerHit* > trackerHits );
    
    
    double getChi2(){ return _chi2; }
@@ -63,7 +63,7 @@ private:
    
   
    
-   void fit()throw( FTDHelixFitterException );
+   void fit();
    
    double _chi2;
    int _Ndf;

@@ -46,8 +46,8 @@ class VXDHelixFitter{
    
 public:
    
-   VXDHelixFitter( Track* track ) throw( VXDHelixFitterException );
-   VXDHelixFitter( std::vector < TrackerHit* > trackerHits ) throw( VXDHelixFitterException );
+   VXDHelixFitter( Track* track );
+   VXDHelixFitter( std::vector < TrackerHit* > trackerHits );
    
    
    double getChi2(){ return _chi2; }
@@ -63,7 +63,7 @@ private:
    
   
    
-   void fit()throw( VXDHelixFitterException );
+   void fit();
    
    double _chi2;
    int _Ndf;
